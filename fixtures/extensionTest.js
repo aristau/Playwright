@@ -1,7 +1,7 @@
 const { test: base, chromium } = require('@playwright/test');
 const path = require('path');
 
-const test = base.extend({
+const test = base.test.extend({
   context: async ({ }, use) => {
     const pathToExtension = path.join(__dirname, '../extension');
     const context = await chromium.launchPersistentContext('', {

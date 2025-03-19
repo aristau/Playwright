@@ -7,9 +7,6 @@ chrome.storage.sync.get(["extensionFirstName"]).then((result) => {
     if(typeof extensionFirstName !== "undefined"){
         document.getElementById('firstName').value = extensionFirstName;
     }
-    else{
-        document.getElementById('firstName').value = 'Anna';
-    }
 });
 
 //Todo: You have to refresh after saving the name in the extension. 
